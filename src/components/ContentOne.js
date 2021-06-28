@@ -3,6 +3,10 @@ import egg from "../assets/desktop/image-transform.jpg";
 import glass from "../assets/desktop/image-stand-out.jpg";
 import cherry from "../assets/desktop/image-graphic-design.jpg";
 import orange from "../assets/desktop/image-photography.jpg";
+import eggMobile from "../assets/mobile/image-transform.jpg";
+import glassMobile from "../assets/mobile/image-stand-out.jpg";
+import cherryMobile from "../assets/mobile/image-graphic-design.jpg";
+import orangeMobile from "../assets/mobile/image-photography.jpg";
 
 const ContentOne = () => {
   return (
@@ -74,7 +78,7 @@ const StyledMain = styled.main`
 
   .egg-content {
     grid-area: egg-content;
-    padding: 6rem;
+    padding: 4rem;
 
     h2 {
       margin-top: 2rem;
@@ -89,7 +93,6 @@ const StyledMain = styled.main`
       line-height: 150%;
       color: hsl(232, 10%, 55%);
       font-weight: 600;
-      width: 80%;
     }
 
     button {
@@ -129,7 +132,7 @@ const StyledMain = styled.main`
 
   .glass-content {
     grid-area: glass-content;
-    padding: 6rem;
+    padding: 4rem;
 
     h2 {
       margin-top: 2rem;
@@ -144,7 +147,6 @@ const StyledMain = styled.main`
       line-height: 150%;
       color: hsl(232, 10%, 55%);
       font-weight: 600;
-      width: 80%;
     }
 
     button {
@@ -226,6 +228,71 @@ const StyledMain = styled.main`
 
     p {
       width: 55%;
+    }
+  }
+
+  @media (max-width: 768px) {
+    grid-template-areas: "egg" "egg-content" "glass" "glass-content" "cherry" "orange";
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 1fr);
+
+    h2,
+    p {
+      width: 100%;
+      text-align: center;
+      margin: 0;
+    }
+
+    h2 {
+      font-size: 3rem;
+    }
+
+    p {
+      font-size: 1.5rem;
+    }
+
+    button {
+      display: block;
+      margin: 0 auto;
+    }
+
+    .egg-content,
+    .glass-content {
+      padding: 4rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+
+  @media (max-width: 425px) {
+    .egg {
+      background: url(${eggMobile});
+      background-size: 100% 100%;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    .glass {
+      background: url(${glassMobile});
+      background-size: 100% 100%;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    .cherry {
+      background: url(${cherryMobile});
+      background-size: 100% 100%;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    .orange {
+      background: url(${orangeMobile});
+      background-size: 100% 100%;
+      background-position: center;
+      background-repeat: no-repeat;
     }
   }
 `;

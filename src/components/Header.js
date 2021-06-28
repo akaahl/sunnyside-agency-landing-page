@@ -14,7 +14,7 @@ const Header = () => {
 
 const StyledHeader = styled.header`
   width: 100%;
-  height: 90vh;
+  height: 100vh;
   background: url(${headerImage});
   background-size: 100% 100%;
   background-position: center;
@@ -38,11 +38,15 @@ const StyledHeader = styled.header`
     height: 5rem;
   }
 
-  @media (max-width: 600px) {
+  @media (max-width: 768px) {
     background: url(${mobileHeader});
     background-size: 100% 100%;
     background-position: center;
     background-repeat: no-repeat;
+
+    h1 {
+      text-align: center;
+    }
   }
 
   @media (min-height: 1024px) {

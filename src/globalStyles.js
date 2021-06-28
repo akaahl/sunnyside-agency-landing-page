@@ -7,6 +7,12 @@ const GlobalStyle = createGlobalStyle`
         box-sizing: border-box;
     }
 
+    @media (max-width: 1024px) {
+        html {
+            /* font-size: 90%; */
+        }
+    }
+
     body {
         position: relative;
         font-family: 'Barlow', sans-serif;
