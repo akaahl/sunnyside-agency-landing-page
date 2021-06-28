@@ -15,6 +15,10 @@ const GlobalStyle = createGlobalStyle`
     button, h1, h2, h3 {
         font-family: 'Fraunces', sans-serif;
     }
+
+    button {
+        cursor: pointer;
+    }
 `;
 
 export default GlobalStyle;
