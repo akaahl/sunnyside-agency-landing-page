@@ -14,7 +14,7 @@ const Header = () => {
 
 const StyledHeader = styled.header`
   width: 100%;
-  height: 85vh;
+  height: 90vh;
   background: url(${headerImage});
   background-size: 100% 100%;
   background-position: center;
@@ -29,7 +29,7 @@ const StyledHeader = styled.header`
     text-transform: uppercase;
     color: hsl(0, 0%, 100%);
     margin-top: -5rem;
-    font-size: 2rem;
+    font-size: 3.5rem;
     letter-spacing: 0.4rem;
   }
 

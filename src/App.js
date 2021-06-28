@@ -1,6 +1,7 @@
 import GlobalStyle from "./globalStyles";
 import Navbar from "./components/Navbar";
 import Header from "./components/Header";
+import ContentOne from "./components/ContentOne";
 
 function App() {
   return (
@@ -8,6 +9,7 @@ function App() {
       <GlobalStyle />
       <Navbar />
       <Header />
+      <ContentOne />
     </div>
   );
 }
