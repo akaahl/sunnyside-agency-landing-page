@@ -1,7 +1,13 @@
+import GlobalStyle from "./globalStyles";
+import Navbar from "./components/Navbar";
+import Header from "./components/Header";
+
 function App() {
   return (
     <div className="App">
-      <h1>Hello World</h1>
+      <GlobalStyle />
+      <Navbar />
+      <Header />
     </div>
   );
 }
