@@ -60,7 +60,7 @@ const StyledMain = styled.main`
   width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: repeat(3, 500px);
+  grid-template-rows: repeat(3, 1fr);
 
   grid-template-areas:
     "egg-content egg"
@@ -93,6 +93,8 @@ const StyledMain = styled.main`
       line-height: 150%;
       color: hsl(232, 10%, 55%);
       font-weight: 600;
+      width: 80%;
+      font-size: 1.1rem;
     }
 
     button {
@@ -115,7 +117,7 @@ const StyledMain = styled.main`
         width: 97%;
         border-radius: 5px;
         height: 5px;
-        background: hsl(51, 100%, 49%);
+        background: #f3e69e;
         z-index: -1;
       }
     }
@@ -147,6 +149,8 @@ const StyledMain = styled.main`
       line-height: 150%;
       color: hsl(232, 10%, 55%);
       font-weight: 600;
+      font-size: 1.1rem;
+      width: 80%;
     }
 
     button {
@@ -169,7 +173,7 @@ const StyledMain = styled.main`
         width: 97%;
         height: 5px;
         border-radius: 5px;
-        background: hsl(7, 99%, 70%);
+        background: rgb(252, 198, 191);
         z-index: -1;
       }
     }
@@ -189,12 +193,13 @@ const StyledMain = styled.main`
     }
 
     h3 {
-      margin-bottom: 2rem;
+      margin-bottom: 1rem;
       font-size: 2rem;
     }
 
     p {
-      width: 60%;
+      font-size: 1.1rem;
+      width: 70%;
       font-weight: 600;
     }
   }
@@ -274,6 +279,11 @@ const StyledMain = styled.main`
       background-repeat: no-repeat;
     }
 
+    .egg-content,
+    .glass-content {
+      padding: 2rem 1rem 4rem 1rem;
+    }
+
     .glass {
       background: url(${glassMobile});
       background-size: 100% 100%;
@@ -286,6 +296,11 @@ const StyledMain = styled.main`
       background-size: 100% 100%;
       background-position: center;
       background-repeat: no-repeat;
+      padding: 4rem 1rem 3rem 1rem;
+
+      p {
+        width: 100%;
+      }
     }
 
     .orange {
@@ -293,6 +308,11 @@ const StyledMain = styled.main`
       background-size: 100% 100%;
       background-position: center;
       background-repeat: no-repeat;
+      padding: 4rem 1rem 3rem 1rem;
+
+      p {
+        width: 90%;
+      }
     }
   }
 `;

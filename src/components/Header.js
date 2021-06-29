@@ -49,6 +49,18 @@ const StyledHeader = styled.header`
     }
   }
 
+  @media (max-width: 425px) {
+    h1 {
+      font-size: 3rem;
+    }
+  }
+
+  @media (max-width: 375px) {
+    h1 {
+      font-size: 2rem;
+    }
+  }
+
   @media (min-height: 1024px) {
     height: 65vh;
   }
