@@ -61,6 +61,28 @@ const StyledFooter = styled.nav`
       margin: 0 1rem;
     }
   }
+
+  @media (max-width: 425px) {
+    ul {
+      li {
+        margin: 0 1rem;
+      }
+    }
+
+    .social-links {
+      img {
+        margin: 0 0.7rem;
+      }
+    }
+  }
+
+  @media (max-width: 325px) {
+    .social-links {
+      img {
+        margin: 0 0.4rem;
+      }
+    }
+  }
 `;
 
 export default FooterNav;
