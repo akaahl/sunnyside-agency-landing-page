@@ -4,6 +4,7 @@ import Header from "./components/Header";
 import ContentOne from "./components/ContentOne";
 import ContentTwo from "./components/ContentTwo";
 import GridImages from "./components/GridImages";
+import FooterNav from "./components/FooterNav";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <ContentOne />
       <ContentTwo />
       <GridImages />
+      <FooterNav />
     </div>
   );
 }

@@ -199,7 +199,7 @@ const StyledMain = styled.main`
 
     p {
       font-size: 1.1rem;
-      width: 70%;
+      width: 65%;
       font-weight: 600;
     }
   }
@@ -214,7 +214,7 @@ const StyledMain = styled.main`
 
     h3,
     p {
-      color: hsl(167, 40%, 24%);
+      color: #2f6d5f;
     }
   }
 
