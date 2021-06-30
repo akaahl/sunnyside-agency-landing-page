@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import headerImage from "../assets/desktop/image-header.jpg";
 import mobileHeader from "../assets/mobile/image-header.jpg";
-import downArrow from "../assets/icon-arrow-down.svg";
 import { motion } from "framer-motion";
 
 const svgVariants = {

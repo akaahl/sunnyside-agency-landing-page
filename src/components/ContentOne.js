@@ -7,12 +7,57 @@ import eggMobile from "../assets/mobile/image-transform.jpg";
 import glassMobile from "../assets/mobile/image-stand-out.jpg";
 import cherryMobile from "../assets/mobile/image-graphic-design.jpg";
 import orangeMobile from "../assets/mobile/image-photography.jpg";
+import { motion } from "framer-motion";
+import { useScroll } from "./useScroll";
+
+const leftSlide = {
+  initial: {
+    x: -700,
+    opacity: 0,
+  },
+  animate: {
+    x: 0,
+    opacity: 1,
+    transition: {
+      duration: 0.8,
+    },
+  },
+};
+
+const rightSlide = {
+  initial: {
+    x: 700,
+    opacity: 0,
+  },
+  animate: {
+    x: 0,
+    opacity: 1,
+    transition: {
+      duration: 0.8,
+    },
+  },
+};
 
 const ContentOne = () => {
+  const [element, controls] = useScroll();
+  const [glass, controlGlass] = useScroll();
+
   return (
     <StyledMain>
-      <section className="egg"></section>
-      <section className="egg-content">
+      <motion.section
+        ref={element}
+        variants={leftSlide}
+        initial="initial"
+        animate={controls}
+        className="egg"
+      ></motion.section>
+      <motion.section
+        ref={element}
+        className="egg-content"
+        variants={rightSlide}
+        initial="initial"
+        animate={controls}
+      >
         <h2>Transform your brand</h2>
 
         <p>
@@ -22,10 +67,22 @@ const ContentOne = () => {
         </p>
 
         <button>Learn more</button>
-      </section>
+      </motion.section>
 
-      <section className="glass"></section>
-      <section className="glass-content">
+      <motion.section
+        className="glass"
+        ref={glass}
+        variants={rightSlide}
+        initial="initial"
+        animate={controlGlass}
+      ></motion.section>
+      <motion.section
+        className="glass-content"
+        ref={glass}
+        variants={leftSlide}
+        initial="initial"
+        animate={controlGlass}
+      >
         <h2>Stand out to the right audience</h2>
 
         <p>
@@ -35,23 +92,23 @@ const ContentOne = () => {
         </p>
 
         <button>Learn more</button>
-      </section>
+      </motion.section>
 
-      <section className="cherry">
+      <motion.section className="cherry">
         <h3>Graphic Design</h3>
         <p>
           Great design makes you memorable. We deliver artwork that underscores
           your brand message and captures potential clients' attention.
         </p>
-      </section>
+      </motion.section>
 
-      <section className="orange">
+      <motion.section className="orange">
         <h3>Photography</h3>
         <p>
           Increase your credibility by getting the most stunning photos that
           improve your business image.
         </p>
-      </section>
+      </motion.section>
     </StyledMain>
   );
 };

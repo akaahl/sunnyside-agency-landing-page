@@ -1,6 +1,5 @@
 import { useState } from "react";
 import styled from "styled-components";
-import logo from "../assets/logo.svg";
 import hamburgerIcon from "../assets/icon-hamburger.svg";
 import closeIcon from "../assets/icon-close.svg";
 import { motion, AnimatePresence } from "framer-motion";
