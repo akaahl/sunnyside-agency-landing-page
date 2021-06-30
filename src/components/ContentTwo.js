@@ -2,14 +2,67 @@ import styled from "styled-components";
 import emily from "../assets/image-emily.jpg";
 import jennie from "../assets/image-jennie.jpg";
 import thomas from "../assets/image-thomas.jpg";
+import { motion } from "framer-motion";
+import { useScroll } from "./useScroll";
+
+const textReveal = {
+  initial: {
+    scale: 2,
+    opacity: 0,
+  },
+  animate: {
+    scale: 1,
+    opacity: 1,
+    transition: {
+      duration: 0.5,
+    },
+  },
+};
+
+const staggerAnimation = {
+  initial: {
+    opacity: 0,
+  },
+  animate: {
+    opacity: 1,
+    transition: { staggerChildren: 0.3, delayChildren: 0.3 },
+  },
+};
+
+const verticalReveal = {
+  initial: {
+    y: -100,
+    opacity: 0,
+  },
+  animate: {
+    y: 0,
+    opacity: 1,
+  },
+};
 
 const ContentTwo = () => {
+  const [element, control] = useScroll();
+  const [grid, controlGrid] = useScroll();
+
   return (
     <StyledContainer>
-      <h4>Client Testimonials</h4>
+      <motion.h4
+        ref={element}
+        variants={textReveal}
+        initial="initial"
+        animate={control}
+      >
+        Client Testimonials
+      </motion.h4>
 
-      <div className="grid-section">
-        <section>
+      <motion.div
+        className="grid-section"
+        ref={grid}
+        variants={staggerAnimation}
+        initial="initial"
+        animate={controlGrid}
+      >
+        <motion.section variants={verticalReveal}>
           <img src={emily} alt="emily" />
           <p>
             We put our trust in Sunnyside and they delivered, making sure our
@@ -20,9 +73,9 @@ const ContentTwo = () => {
             <span>Emily R.</span>
             <small>Marketing Director</small>
           </div>
-        </section>
+        </motion.section>
 
-        <section>
+        <motion.section variants={verticalReveal}>
           <img src={thomas} alt="thomas" />
           <p>
             Sunnyside's enthusiasm coupled with their keen interest in our
@@ -33,9 +86,9 @@ const ContentTwo = () => {
             <span>Thomas S.</span>
             <small>Chief Operating Officer</small>
           </div>
-        </section>
+        </motion.section>
 
-        <section>
+        <motion.section variants={verticalReveal}>
           <img src={jennie} alt="jennie" />
           <p>
             Incredible end result! Our sales increased over 400% when we worked
@@ -46,8 +99,8 @@ const ContentTwo = () => {
             <span>Jennie F.</span>
             <small>Business Owner</small>
           </div>
-        </section>
-      </div>
+        </motion.section>
+      </motion.div>
     </StyledContainer>
   );
 };
