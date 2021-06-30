@@ -89,6 +89,7 @@ const StyledHeader = styled.header`
     margin-top: 3.7rem;
     /* height: 4rem; */
     transform: scaleY(0.7);
+    z-index: 1;
   }
 
   @media (max-width: 768px) {

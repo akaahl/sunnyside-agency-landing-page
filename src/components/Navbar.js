@@ -167,11 +167,12 @@ const StyledNav = styled(motion.nav)`
   .mobile-menu {
     position: absolute;
     background: hsl(0, 0%, 100%);
-    padding: 4rem 6rem;
+    padding: 5rem 6rem;
     top: 8rem;
     right: 3rem;
     list-style: none;
     display: none;
+    z-index: 10;
 
     &:before {
       content: "";
