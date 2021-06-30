@@ -3,14 +3,35 @@ import milk from "../assets/desktop/image-gallery-milkbottles.jpg";
 import orange from "../assets/desktop/image-gallery-orange.jpg";
 import cone from "../assets/desktop/image-gallery-cone.jpg";
 import sugarCubes from "../assets/desktop/image-gallery-sugarcubes.jpg";
+import { motion } from "framer-motion";
 
 const GridImages = () => {
   return (
     <StyledContainer>
-      <img src={milk} alt="milk" className="desktop" />
-      <img src={orange} alt="milk" className="desktop" />
-      <img src={cone} alt="milk" className="desktop" />
-      <img src={sugarCubes} alt="milk" className="desktop" />
+      <motion.img
+        whileHover={{ scale: 1.1 }}
+        src={milk}
+        alt="milk"
+        className="desktop"
+      />
+      <motion.img
+        whileHover={{ scale: 1.1 }}
+        src={orange}
+        alt="milk"
+        className="desktop"
+      />
+      <motion.img
+        whileHover={{ scale: 1.1 }}
+        src={cone}
+        alt="milk"
+        className="desktop"
+      />
+      <motion.img
+        whileHover={{ scale: 1.1 }}
+        src={sugarCubes}
+        alt="milk"
+        className="desktop"
+      />
     </StyledContainer>
   );
 };
