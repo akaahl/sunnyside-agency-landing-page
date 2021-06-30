@@ -44,20 +44,22 @@ const Navbar = () => {
         />
       )}
 
-      <ul className="mobile-menu">
-        <li>
-          <a href="#about">About</a>
-        </li>
-        <li>
-          <a href="#services">Services</a>
-        </li>
-        <li>
-          <a href="#projects">Projects</a>
-        </li>
-        <li>
-          <button>Contact</button>
-        </li>
-      </ul>
+      {mobileOpen && (
+        <ul className="mobile-menu">
+          <li>
+            <a href="#about">About</a>
+          </li>
+          <li>
+            <a href="#services">Services</a>
+          </li>
+          <li>
+            <a href="#projects">Projects</a>
+          </li>
+          <li>
+            <button>Contact</button>
+          </li>
+        </ul>
+      )}
     </StyledNav>
   );
 };
@@ -109,8 +111,19 @@ const StyledNav = styled.nav`
     background: hsl(0, 0%, 100%);
     padding: 4rem 6rem;
     top: 8rem;
-    right: 2rem;
+    right: 3rem;
     list-style: none;
+
+    &:before {
+      content: "";
+      border-top: 50px solid white;
+      border-left: 50px solid transparent;
+      position: absolute;
+      top: -3.1rem;
+      right: 0;
+      transform: rotate(90deg);
+      display: block;
+    }
 
     li {
       margin: 1rem 0;
