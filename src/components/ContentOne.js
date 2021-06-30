@@ -12,7 +12,7 @@ import { useScroll } from "./useScroll";
 
 const leftSlide = {
   initial: {
-    x: -700,
+    x: -500,
     opacity: 0,
   },
   animate: {
@@ -26,7 +26,7 @@ const leftSlide = {
 
 const rightSlide = {
   initial: {
-    x: 700,
+    x: 500,
     opacity: 0,
   },
   animate: {

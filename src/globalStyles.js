@@ -16,6 +16,7 @@ const GlobalStyle = createGlobalStyle`
     body {
         position: relative;
         font-family: 'Barlow', sans-serif;
+        overflow-x: hidden;
     }
 
     button, h1, h2, h3, h4 {
