@@ -2,12 +2,65 @@ import styled from "styled-components";
 import headerImage from "../assets/desktop/image-header.jpg";
 import mobileHeader from "../assets/mobile/image-header.jpg";
 import downArrow from "../assets/icon-arrow-down.svg";
+import { motion } from "framer-motion";
+
+const svgVariants = {
+  animate: {
+    y: 50,
+    transition: {
+      delay: 1.5,
+      yoyo: Infinity,
+      duration: 0.4,
+    },
+  },
+};
+
+const pathVariants = {
+  initial: {
+    y: -100,
+    opacity: 0,
+    pathLength: 0,
+  },
+  animate: {
+    y: 0,
+    opacity: 1,
+    pathLength: 1,
+    transition: {
+      duration: 1,
+      delay: 1,
+    },
+  },
+};
 
 const Header = () => {
   return (
     <StyledHeader>
       <h1>We are creatives</h1>
-      <img src={downArrow} alt="down arrow" className="down-arrow" />
+      {/* <img src={downArrow} alt="down arrow" className="down-arrow" /> */}
+      <motion.svg
+        width="36"
+        height="114"
+        xmlns="http://www.w3.org/2000/svg"
+        className="down-arrow"
+        variants={svgVariants}
+        animate="animate"
+      >
+        <g
+          stroke="#FFF"
+          stroke-width="6"
+          fill="none"
+          fill-rule="evenodd"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <motion.path
+            d="M18 3v100M3 95.484l15 15 15-15"
+            variants={pathVariants}
+            initial="initial"
+            animate="animate"
+          />
+        </g>
+      </motion.svg>
     </StyledHeader>
   );
 };
@@ -35,7 +88,8 @@ const StyledHeader = styled.header`
 
   .down-arrow {
     margin-top: 3.7rem;
-    height: 5rem;
+    /* height: 4rem; */
+    transform: scaleY(0.7);
   }
 
   @media (max-width: 768px) {
